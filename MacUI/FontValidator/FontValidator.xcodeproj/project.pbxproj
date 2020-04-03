@@ -35,6 +35,16 @@
 		56E502A51C6F840E00B1D609 /* FontValidator.help in Resources */ = {isa = PBXBuildFile; fileRef = 56E502A41C6F840E00B1D609 /* FontValidator.help */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A378A48C243369D100D24B07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 565FFDD01C67CC4E00E203FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A378A485243367CB00D24B07;
+			remoteInfo = FontValidatorCLI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		56871BD61C68E7710058C6FA /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -66,6 +76,7 @@
 		56871BD41C68E7620058C6FA /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		56E139321C69F312004C7072 /* PreferenceWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferenceWindow.xib; sourceTree = "<group>"; };
 		56E502A41C6F840E00B1D609 /* FontValidator.help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FontValidator.help; sourceTree = "<group>"; };
+		A378A4892433688400D24B07 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; name = Makefile; path = FontValidator/Makefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				565FFDDA1C67CC4E00E203FB /* FontValidator */,
+				A378A48B2433689900D24B07 /* FontValidatorCLI */,
 				56871BD31C68E4470058C6FA /* Frameworks */,
 				565FFDD91C67CC4E00E203FB /* Products */,
 			);
@@ -134,7 +146,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A378A48B2433689900D24B07 /* FontValidatorCLI */ = {
+			isa = PBXGroup;
+			children = (
+				A378A4892433688400D24B07 /* Makefile */,
+			);
+			name = FontValidatorCLI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		A378A485243367CB00D24B07 /* FontValidatorCLI */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = A378A486243367CB00D24B07 /* Build configuration list for PBXLegacyTarget "FontValidatorCLI" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = FontValidator;
+			dependencies = (
+			);
+			name = FontValidatorCLI;
+			passBuildSettingsInEnvironment = 1;
+			productName = FontValidatorCLI;
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		565FFDD71C67CC4E00E203FB /* FontValidator */ = {
@@ -149,6 +186,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A378A48D243369D100D24B07 /* PBXTargetDependency */,
 			);
 			name = FontValidator;
 			productName = FontValidator;
@@ -167,6 +205,9 @@
 					565FFDD71C67CC4E00E203FB = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					A378A485243367CB00D24B07 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 				};
 			};
 			buildConfigurationList = 565FFDD31C67CC4E00E203FB /* Build configuration list for PBXProject "FontValidator" */;
@@ -184,6 +225,7 @@
 			targets = (
 				565FFDD71C67CC4E00E203FB /* FontValidator */,
 				56E502A61C6F8A6500B1D609 /* Index Help */,
+				A378A485243367CB00D24B07 /* FontValidatorCLI */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +275,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A378A48D243369D100D24B07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A378A485243367CB00D24B07 /* FontValidatorCLI */;
+			targetProxy = A378A48C243369D100D24B07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		565FFDE41C67CC4E00E203FB /* Document.xib */ = {
@@ -417,6 +467,50 @@
 			};
 			name = Release;
 		};
+		A378A487243367CB00D24B07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 24E4J6853D;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A378A488243367CB00D24B07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 24E4J6853D;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MTL_FAST_MATH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +537,15 @@
 			buildConfigurations = (
 				56E502A81C6F8A6500B1D609 /* Debug */,
 				56E502A91C6F8A6500B1D609 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A378A486243367CB00D24B07 /* Build configuration list for PBXLegacyTarget "FontValidatorCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A378A487243367CB00D24B07 /* Debug */,
+				A378A488243367CB00D24B07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
